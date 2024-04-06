@@ -8,6 +8,8 @@ import { QueryClient, QueryClientProvider } from 'react-query';
 import {ReactQueryDevtools} from 'react-query/devtools'
 import { HeroDetails } from './components/heroDetails.page';
 import { ParallalQueries } from './components/parallalQueries.page';
+import { RQpaginated } from './components/RQpaginated.page';
+import { RQinfinite } from './components/RQinfinite.page';
 
 const queryClient= new QueryClient();
 function App() {
@@ -30,6 +32,8 @@ function App() {
         </nav>
         <Routes>
           <Route path='/' element={<HomePage/>} />
+          <Route path='/rq-infinite' element={<RQinfinite/>} />
+          <Route path='/rq-paginated-colors' element={<RQpaginated/>} />
           <Route path='/rq-parallal-heros' element={<ParallalQueries/>} />
           <Route path='/rq-super-heros/:heroId' element={<HeroDetails/>} />
           <Route path='/super-heros' element={<SuperHerosPage/>} />
